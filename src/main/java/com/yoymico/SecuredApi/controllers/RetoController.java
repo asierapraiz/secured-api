@@ -25,6 +25,15 @@ public class RetoController {
         return rr.findAll();
     }
 
+    @GetMapping("/git")
+    public ResponseEntity<?> git() {
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("mensaje", "Visto desde git!");
+
+        return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
+    }
+
     @PostMapping("/save")
     public ResponseEntity<?> create(@RequestBody Reto reto) {
         Map<String, Object> response = new HashMap<>();
