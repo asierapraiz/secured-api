@@ -29,7 +29,7 @@ public class RetoController {
     public ResponseEntity<?> git() {
 
         Map<String, Object> response = new HashMap<>();
-        response.put("mensaje", "Visto desde git!");
+        response.put("mensaje", "Visto desde ggit!");
 
         return new ResponseEntity<Map<String, Object>>(response, HttpStatus.OK);
     }
